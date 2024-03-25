@@ -1,0 +1,22 @@
+{
+  "Records": [
+    {
+      "EventSource": "aws:sns",
+      "EventVersion": "1.0",
+      "EventSubscriptionArn": "arn:aws:sns:us-west-2:012345678901:TeamNotifications-main:01234567-0123-0123-0123-012345678901",
+      "Sns": {
+        "Type": "Notification",
+        "MessageId": "98765432-9876-9876-9876-987654321098",
+        "TopicArn": "arn:aws:sns:us-west-2:012345678901:TeamNotifications-main",
+        "Subject": "TEAM Access request to AWS account - ExampleAccount (012345678901)",
+        "Message": "MESSAGE_PLACEHOLDER",
+        "Timestamp": "2024-02-15T17:00:00.000Z",
+        "SignatureVersion": "1",
+        "Signature": "examplesignature",
+        "SigningCertUrl": "https://sns.us-west-2.amazonaws.com/SimpleNotificationService-0123456789abcdef0123456789abcdef.pem",
+        "UnsubscribeUrl": "https://sns.us-west-2.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-west-2:012345678901:TeamNotifications-main:01234567-0123-0123-0123-012345678901",
+        "MessageAttributes": {}
+      }
+    }
+  ]
+}

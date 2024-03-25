@@ -1,0 +1,87 @@
+{
+  "email": "CURRENTUSEREMAIL",
+  "username": "idc_CURRENTUSERUPN",
+  "duration": "3600",
+  "accountId": "012345678901",
+  "status": "approved",
+  "accountName": "ExampleAccount",
+  "id": "98765432-9876-9876-9876-987654321098",
+  "role": "TEAM-ExampleAccess",
+  "roleId": "arn:aws:sso:::permissionSet/ssoins-0123456789012345/ps-0123456789012345",
+  "time": "1",
+  "startTime": "2100-02-15T12:00:00-05:00",
+  "justification": "Example Justification",
+  "ticketNo": "1234",
+  "approver": "CURRENTUSEREMAIL",
+  "revoker": null,
+  "instanceARN": "arn:aws:sso:::instance/ssoins-0123456789012345",
+  "approvers": [
+    "CURRENTUSEREMAIL",
+    "CURRENTUSEREMAIL"
+  ],
+  "expire": 86400,
+  "approvalRequired": true,
+  "userId": "12345678-1234-1234-1234-123456789012",
+  "ses_notifications_enabled": false,
+  "sns_notifications_enabled": true,
+  "slack_notifications_enabled": false,
+  "ses_source_email": "",
+  "ses_source_arn": "",
+  "notification_topic_arn": "arn:aws:sns:us-west-2:012345678901:TeamNotifications-main",
+  "sso_login_url": "https://example.awsapps.com/start",
+  "requests_table": "requests-abcdefghijklmnopqrstuvwxyz-main",
+  "revoke_sm": "arn:aws:states:us-west-2:012345678901:stateMachine:TEAM-Revoke-SM-main",
+  "grant_sm": "arn:aws:states:us-west-2:012345678901:stateMachine:TEAM-Grant-SM-main",
+  "fn_teamstatus_arn": "arn:aws:lambda:us-west-2:012345678901:function:teamStatus-main",
+  "fn_teamnotifications_arn": "arn:aws:lambda:us-west-2:012345678901:function:teamNotifications-main",
+  "lastTaskResult": {
+    "ExecutedVersion": "$LATEST",
+    "Payload": {
+      "statusCode": 200,
+      "body": "PAYLOAD_PLACEHOLDER"
+    },
+    "SdkHttpMetadata": {
+      "AllHttpHeaders": {
+        "X-Amz-Executed-Version": [
+          "$LATEST"
+        ],
+        "x-amzn-Remapped-Content-Length": [
+          "0"
+        ],
+        "Connection": [
+          "keep-alive"
+        ],
+        "x-amzn-RequestId": [
+          "98765432-9876-9876-9876-987654321098"
+        ],
+        "Content-Length": [
+          "1000"
+        ],
+        "Date": [
+          "Sat, 16 Mar 2024 14:13:42 GMT"
+        ],
+        "X-Amzn-Trace-Id": [
+          "root=1-98765432-9876-9876-9876-987654321098;parent=0123456789012345;sampled=0;lineage=01234567:0|01234567:0"
+        ],
+        "Content-Type": [
+          "application/json"
+        ]
+      },
+      "HttpHeaders": {
+        "Connection": "keep-alive",
+        "Content-Length": "1000",
+        "Content-Type": "application/json",
+        "Date": "Sat, 16 Mar 2024 14:13:42 GMT",
+        "X-Amz-Executed-Version": "$LATEST",
+        "x-amzn-Remapped-Content-Length": "0",
+        "x-amzn-RequestId": "98765432-9876-9876-9876-987654321098",
+        "X-Amzn-Trace-Id": "root=1-98765432-9876-9876-9876-987654321098;parent=0123456789012345;sampled=0;lineage=01234567:0|01234567:0"
+      },
+      "HttpStatusCode": 200
+    },
+    "SdkResponseMetadata": {
+      "RequestId": "98765432-9876-9876-9876-987654321098"
+    },
+    "StatusCode": 200
+  }
+}

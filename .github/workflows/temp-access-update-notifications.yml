@@ -1,0 +1,53 @@
+name: temp-access-update-notifications
+
+on:
+  push:
+    branches:
+      - main # or your default branch
+    paths: 
+      - 'utilities/temp-access-update-notifications/src/**'
+      - 'utilities/temp-access-update-notifications/Dockerfile'
+      - 'utilities/common/src/aws_utilities.py'
+      - '.github/workflows/temp-access-update-notifications.yml'
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-region: ${{ secrets.AWS_REGION }}
+        role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+        role-duration-seconds: 1200
+        role-session-name: GitHubActions
+
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+
+    - name: Build, tag, and push image to Amazon ECR
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        ECR_REPOSITORY: temp-access-update-notifications # your ECR repository name
+        IMAGE_TAG: latest # or use ${{ github.sha }} for commit-based tagging
+      run: |
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f utilities/temp-access-update-notifications/Dockerfile utilities/.
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+
+    - name: Update Lambda function to use the latest image
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        ECR_REPOSITORY: temp-access-update-notifications # your ECR repository name
+        IMAGE_TAG: latest # or use ${{ github.sha }} for commit-based tagging
+      run: |
+        aws lambda update-function-code --function-name temp-access-update-notifications --image-uri $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG

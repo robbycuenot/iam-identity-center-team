@@ -1,0 +1,20 @@
+{
+    "name": "iam-identity-center-team",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bierner.markdown-mermaid",
+                "GitHub.copilot",
+                "GitHub.copilot-chat",
+                "github.vscode-github-actions",
+                "ms-python.python",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+    "postCreateCommand": "./.devcontainer/postCreateCommand.sh ${AWS_REGION}"
+}

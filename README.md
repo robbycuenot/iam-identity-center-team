@@ -1,3 +1,8 @@
+NOTE: This is a fork of https://github.com/aws-samples/iam-identity-center-team, and has the following modifications:
+
+1. A [.devcontainer](/.devcontainer/) specification has been defined to make working with this repository easier through codespaces (or devcontainers locally)
+1. Integrations with MS Teams have been added under the [utilities](/utilities/) folder. Additional information can be found within the [readme](/utilities/README.md) there.
+
 # Temporary elevated access management (TEAM) for AWS IAM Identity Center
 This repository contains the source code for deploying TEAM application.
 

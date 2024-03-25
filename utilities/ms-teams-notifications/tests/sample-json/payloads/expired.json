@@ -1,0 +1,35 @@
+{
+  "data": {
+    "updateRequests": {
+      "id": "98765432-9876-9876-9876-987654321098",
+      "email": "CURRENTUSEREMAIL",
+      "accountId": "012345678901",
+      "accountName": "ExampleAccount",
+      "role": "TEAM-ExampleAccess",
+      "roleId": "arn:aws:sso:::permissionSet/ssoins-0123456789012345/ps-0123456789012345",
+      "startTime": "2024-02-15T12:00:00-05:00",
+      "duration": "2",
+      "justification": "Example Justification",
+      "status": "expired",
+      "comment": null,
+      "username": "idc_CURRENTUSERUPN",
+      "approver": null,
+      "approverId": null,
+      "approvers": [
+        "CURRENTUSEREMAIL"
+      ],
+      "approver_ids": [
+        "idc_CURRENTUSERUPN",
+        "idc_CURRENTUSERUPN"
+      ],
+      "revoker": null,
+      "revokerId": null,
+      "endTime": null,
+      "ticketNo": "",
+      "revokeComment": null,
+      "createdAt": "2024-02-15T12:00:00-05:00",
+      "updatedAt": "2024-02-15T12:00:00-05:00",
+      "owner": "idc_CURRENTUSERUPN"
+    }
+  }
+}

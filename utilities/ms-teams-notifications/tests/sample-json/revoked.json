@@ -1,0 +1,179 @@
+{
+  "email": "CURRENTUSEREMAIL",
+  "username": "idc_CURRENTUSERUPN",
+  "duration": "3600",
+  "accountId": "012345678901",
+  "status": "ended",
+  "accountName": "ExampleAccount",
+  "id": "98765432-9876-9876-9876-987654321098",
+  "role": "TEAM-ExampleAccess",
+  "roleId": "arn:aws:sso:::permissionSet/ssoins-0123456789012345/ps-0123456789012345",
+  "time": "1",
+  "startTime": "2024-02-15T12:00:00-05:00",
+  "justification": "Example Justification",
+  "ticketNo": "1234",
+  "approver": "CURRENTUSEREMAIL",
+  "revoker": "CURRENTUSEREMAIL",
+  "instanceARN": "arn:aws:sso:::instance/ssoins-0123456789012345",
+  "approvers": [
+    "CURRENTUSEREMAIL",
+    "CURRENTUSEREMAIL"
+  ],
+  "expire": 86400,
+  "approvalRequired": true,
+  "userId": "12345678-1234-1234-1234-123456789012",
+  "ses_notifications_enabled": false,
+  "sns_notifications_enabled": true,
+  "slack_notifications_enabled": false,
+  "ses_source_email": "",
+  "ses_source_arn": "",
+  "notification_topic_arn": "arn:aws:sns:us-west-2:012345678901:TeamNotifications-main",
+  "sso_login_url": "https://example.awsapps.com/start",
+  "requests_table": "requests-abcdefghijklmnopqrstuvwxyz-main",
+  "revoke_sm": "arn:aws:states:us-west-2:012345678901:stateMachine:TEAM-Revoke-SM-main",
+  "grant_sm": "arn:aws:states:us-west-2:012345678901:stateMachine:TEAM-Grant-SM-main",
+  "fn_teamstatus_arn": "arn:aws:lambda:us-west-2:012345678901:function:teamStatus-main",
+  "fn_teamnotifications_arn": "arn:aws:lambda:us-west-2:012345678901:function:teamNotifications-main",
+  "data": {
+    "Item": {
+      "role": {
+        "S": "TEAM-ExampleAccess"
+      },
+      "accountName": {
+        "S": "ExampleAccount"
+      },
+      "__typename": {
+        "S": "requests"
+      },
+      "approvers": {
+        "L": [
+          {
+            "S": "CURRENTUSEREMAIL"
+          },
+          {
+            "S": "CURRENTUSEREMAIL"
+          }
+        ]
+      },
+      "revokerId": {
+        "S": "idc_CURRENTUSERUPN"
+      },
+      "session_duration": {
+        "S": "PT4H"
+      },
+      "duration": {
+        "S": "1"
+      },
+      "createdAt": {
+        "S": "2024-03-19T19:49:47.578Z"
+      },
+      "ticketNo": {
+        "S": ""
+      },
+      "startTime": {
+        "S": "2024-03-19T20:14:14.327Z"
+      },
+      "justification": {
+        "S": "Example Justification"
+      },
+      "id": {
+        "S": "12345678-1234-1234-1234-123456789012"
+      },
+      "email": {
+        "S": "CURRENTUSEREMAIL"
+      },
+      "updatedAt": {
+        "S": "2024-03-19T20:15:03.727Z"
+      },
+      "owner": {
+        "S": "12345678-1234-1234-1234-123456789012::idc_CURRENTUSERUPN"
+      },
+      "approver": {
+        "S": "CURRENTUSEREMAIL"
+      },
+      "approverId": {
+        "S": "idc_CURRENTUSERUPN"
+      },
+      "roleId": {
+        "S": "arn:aws:sso:::permissionSet/ssoins-0123456789012345/ps-0123456789012345"
+      },
+      "accountId": {
+        "S": "012345678901"
+      },
+      "revokeComment": {
+        "S": "Example Revoke Comment"
+      },
+      "approver_ids": {
+        "L": [
+          {
+            "S": "idc_CURRENTUSERUPN"
+          },
+          {
+            "S": "idc_CURRENTUSERUPN"
+          }
+        ]
+      },
+      "comment": {
+        "S": "Example Comment"
+      },
+      "revoker": {
+        "S": "CURRENTUSEREMAIL"
+      },
+      "status": {
+        "S": "revoked"
+      },
+      "username": {
+        "S": "idc_CURRENTUSERUPN"
+      }
+    },
+    "SdkHttpMetadata": {
+      "AllHttpHeaders": {
+        "Server": [
+          "Server"
+        ],
+        "Connection": [
+          "keep-alive"
+        ],
+        "x-amzn-RequestId": [
+          "G16IGTVHS3IIFMCNDNHUEJNKJASNDKJNKJASNDO5AEMVJF66Q9JG"
+        ],
+        "x-amz-crc32": [
+          "0123456789"
+        ],
+        "Content-Length": [
+          "1000"
+        ],
+        "Date": [
+          "Tue, 19 Mar 2024 20:15:16 GMT"
+        ],
+        "Content-Type": [
+          "application/x-amz-json-1.0"
+        ]
+      },
+      "HttpHeaders": {
+        "Connection": "keep-alive",
+        "Content-Length": "1000",
+        "Content-Type": "application/x-amz-json-1.0",
+        "Date": "Tue, 19 Mar 2024 20:15:16 GMT",
+        "Server": "Server",
+        "x-amz-crc32": "0123456789",
+        "x-amzn-RequestId": "G16IGTVHS3IIFMCNDNHUEJNKJASNDKJNKJASNDO5AEMVJF66Q9JG"
+      },
+      "HttpStatusCode": 200
+    },
+    "SdkResponseMetadata": {
+      "RequestId": "G16IGTVHS3IIFMCNDNHUEJNKJASNDKJNKJASNDO5AEMVJF66Q9JG"
+    }
+  },
+  "revoke": {
+    "AccountAssignmentDeletionStatus": {
+      "PermissionSetArn": "arn:aws:sso:::permissionSet/ssoins-0123456789012345/ps-0123456789012345",
+      "PrincipalId": "9876543210-98765432-9876-9876-9876-987654321098",
+      "PrincipalType": "USER",
+      "RequestId": "98765432-9876-9876-9876-987654321098",
+      "Status": "IN_PROGRESS",
+      "TargetId": "012345678901",
+      "TargetType": "AWS_ACCOUNT"
+    }
+  }
+}
